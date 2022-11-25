@@ -24,13 +24,14 @@ class Huffman:
     def __init__(self):
         self.root = None
 
-    def add(self,x,x1):
+    def add(self,x,x1,current):
         if self.root == None:
             self.root = Node(x1)
 
         else:
             if len(x1[1])%2==0:
-                pass
+                if current.left==None:
+                    current.left = Node()
             else:
                 pass
 
