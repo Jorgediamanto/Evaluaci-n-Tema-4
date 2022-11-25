@@ -24,7 +24,7 @@ class Huffman:
     def __init__(self):
         self.root = None
 
-    def add(self,x,x3,current):
+    def hacer_arbol(self,x,x3):
         if self.root == None:
             self.root = Node(x)
 
@@ -70,11 +70,8 @@ class Huffman:
                 print(x2)
 
 
-                current.left = Node(x1)
-
-                
-                    
-                current.right = Node(x2)
+                self.root.left = Node(x1)  
+                self.root.right = Node(x2)
             else:
                 pass
 
@@ -84,9 +81,8 @@ x3 = [[0.2,"A"],[0.17,"F"],[0.13,"1"],[0.21,"3"],[0.09,"M"],[0.15,"T"]]
 
 x = estandarizar(x3)
 x.reverse()
-print(x)
+
 
 a = Huffman()
-a.add(x,x3,[0.2,"A"])
-print(a.root.frequency)
-#a.add(x,x3,[0.17,"F"])
+a.hacer_arbol(x,x3)
+a.hacer_arbol(x,x3)
