@@ -25,6 +25,7 @@ class Huffman:
         self.root = None
 
     def hacer_arbol(self,x,x3):
+        print(x)
         if self.root == None:
             self.root = Node(x)
 
@@ -70,10 +71,12 @@ class Huffman:
                 print(x2)
 
 
-                self.root.left = Node(x1)
-                self.root.left  
+                self.root.left = Huffman()
+                self.root.left.hacer_arbol(x1,x3) 
+                self.root.left.hacer_arbol(x1,x3)   
                 self.root.right = Node(x2)
-            else:
+            elif len(x[0])%2!=0 and len(x[0])!=1:
+                print("hola")
                 pass
 
                     
@@ -83,8 +86,8 @@ x3 = [[0.2,"A"],[0.17,"F"],[0.13,"1"],[0.21,"3"],[0.09,"M"],[0.15,"T"]]
 x = estandarizar(x3)
 x.reverse()
 
-
+print(x)
 a = Huffman()
 a.hacer_arbol(x,x3)
 a.hacer_arbol(x,x3)
-print(a.root.left.value)
+#print(a.root.left.value)
