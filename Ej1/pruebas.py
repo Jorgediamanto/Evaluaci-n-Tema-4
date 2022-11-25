@@ -12,8 +12,8 @@ def estandarizar(values):
 
 class Node:
     def __init__(self,value):
-        self.value = value[1]
-        self.frequency = value[0]
+        self.value = value[0]
+        self.frequency = value[1]
         self.right = None
         self.left = None
 
@@ -70,7 +70,8 @@ class Huffman:
                 print(x2)
 
 
-                self.root.left = Node(x1)  
+                self.root.left = Node(x1)
+                self.root.left  
                 self.root.right = Node(x2)
             else:
                 pass
@@ -86,3 +87,4 @@ x.reverse()
 a = Huffman()
 a.hacer_arbol(x,x3)
 a.hacer_arbol(x,x3)
+print(a.root.left.value)
