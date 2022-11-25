@@ -88,4 +88,5 @@ print(x)
 
 a = Huffman()
 a.add(x,x3,[0.2,"A"])
-a.add(x,x3,[0.17,"F"])
+print(a.root.frequency)
+#a.add(x,x3,[0.17,"F"])
